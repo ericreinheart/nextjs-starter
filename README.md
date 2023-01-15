@@ -1,6 +1,6 @@
 # nextjs-starter
 
-this is a on opinionated next.js starter with typescript, eslint, prettier, tailwind.
+this is an opinionated next.js starter with typescript, eslint, prettier, tailwind.
 
 ## getting started
 
