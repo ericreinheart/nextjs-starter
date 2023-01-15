@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-h1 {
+  @apply font-title;
+}
+
+a {
+  @apply rounded-sm;
+}
+
+a {
+  @apply rounded-md;
+}
+
+a,
+button {
+  @apply relative focus:outline-none;
+}
+
+a:focus::before,
+button:focus::before {
+  content: '';
+  @apply absolute -inset-1 border-2 border-white;
+}
+
+a:focus::before {
+  @apply rounded;
+}
+
+button:focus::before {
+  @apply rounded-lg;
+}
