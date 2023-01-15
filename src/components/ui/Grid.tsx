@@ -3,6 +3,7 @@ import * as React from 'react'
 import { cx } from '@/utils'
 
 type GridProps = React.ComponentPropsWithoutRef<'div'>
+
 /**
  * Grid component
  */

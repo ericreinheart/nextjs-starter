@@ -6,6 +6,7 @@ export type LinkProps = NextLinkProps & {
   className?: string
   isExternal?: boolean
 }
+
 /**
  * Link component
  */

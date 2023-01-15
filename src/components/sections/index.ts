@@ -1,7 +1,2 @@
-export * from './Assets'
-export * from './Counter'
-export * from './Hero'
-export * from './HowItWorks'
 export * from './PageError'
 export * from './Seo'
-export * from './Socials'
