@@ -13,15 +13,13 @@ nvm use
 then install with:
 
 ```bash
-yarn
-# or
-yarn install
+pnpm install
 ```
 
 for development, run:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
