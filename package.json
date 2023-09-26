@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.7",
     "framer-motion": "^10.1.0",
     "next": "^13.2.4",
