@@ -10,7 +10,7 @@ const BUTTON_CLASSES = {
   default: cx(''),
   filled: FILLED_BUTTON_CLASSES,
   outline: OUTLINE_BUTTON_CLASSES,
-  disabled: DISABLED_BUTTON_CLASSES,
+  disabled: DISABLED_BUTTON_CLASSES, // use `disabled:` prefix
   loading: DISABLED_BUTTON_CLASSES,
 }
 
@@ -38,8 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className,
       BUTTON_CLASSES.default,
       BUTTON_CLASSES[variant],
-      isDisabled && BUTTON_CLASSES.disabled,
-      isLoading && BUTTON_CLASSES.loading
+      BUTTON_CLASSES.disabled,
     )
 
     return (
@@ -52,7 +51,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
       </button>
     )
-  }
+  },
 )
 
 Button.displayName = 'Button'

@@ -21,7 +21,8 @@
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
