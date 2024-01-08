@@ -4,7 +4,7 @@ this is an opinionated next.js starter with typescript, eslint, prettier, tailwi
 
 ## getting started
 
-first, make sure you have node version `18.17.0` installed. or just use [node version manager](https://github.com/nvm-sh/nvm) and type:
+first, make sure you have node version `20.10.0` installed. or just use [node version manager](https://github.com/nvm-sh/nvm) and type:
 
 ```bash
 nvm use
