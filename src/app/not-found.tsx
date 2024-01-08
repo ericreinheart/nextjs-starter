@@ -1,13 +1,8 @@
-import { PageError, SeoSection } from '@/components/sections'
+import { PageError } from '@/components/sections'
 
 function Custom404Page() {
   return (
     <>
-      <SeoSection
-        title="404 Error"
-        description="Oops! Page not found."
-        isNoIndex={true}
-      />
       <PageError
         errorCode={404}
         errorTitle="Looks like you're lost!"

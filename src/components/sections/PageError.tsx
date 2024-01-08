@@ -1,5 +1,7 @@
+'use client'
+
 import * as React from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 import { Button, Container, Grid, Section } from '@/components/ui'
 
@@ -20,7 +22,7 @@ export function PageError(props: PageErrorProps) {
       return router.push('/')
     }
 
-    router.reload()
+    router.refresh()
   }
 
   return (
