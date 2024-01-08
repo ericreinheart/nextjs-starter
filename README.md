@@ -10,6 +10,12 @@ first, make sure you have node version `20.10.0` installed. or just use [node ve
 nvm use
 ```
 
+to use pnpm run:
+
+```bash
+corepack enable
+```
+
 then install with:
 
 ```bash
