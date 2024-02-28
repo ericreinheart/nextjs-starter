@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { Button, Container, Flex, Link } from '@/components/ui'
+import { cx } from '@/utils'
 
 import { ColorModeSwitch } from './includes'
 
@@ -10,9 +11,17 @@ export function Header() {
   return (
     <header>
       <Container>
-        <Flex className="items-center justify-between">
-          <Link href="/">
-            <Logo />
+        <Flex className="h-20 items-center justify-between">
+          <Link
+            className={cx(
+              'flex h-10 w-auto flex-row items-center justify-start gap-x-4',
+            )}
+            href="/"
+          >
+            <Logo className={cx('h-10')} />
+            <p className="font-italic text-display-md font-bold">
+              Bitcoin Project
+            </p>
           </Link>
 
           {/* links */}

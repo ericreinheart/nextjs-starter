@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { Link } from '@/components/ui'
 import { Logo } from '@/components/core'
+import { cx } from '@/utils'
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
         {/* logo */}
         <div>
           <Link href="/">
-            <Logo />
+            <Logo className={cx('h-10')} />
           </Link>
         </div>
 

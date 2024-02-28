@@ -6,8 +6,8 @@ import { Layout } from '@/components/core'
 import { cx } from '@/utils'
 
 export const metadata: Metadata = {
-  title: 'NextJS Starter',
-  description: ':)',
+  title: 'Bitcoin Project',
+  description: 'Vires in Numeris.',
 }
 
 export default function RootLayout({

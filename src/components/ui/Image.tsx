@@ -6,6 +6,10 @@ export type ImageProps = NextImageProps
 /**
  * Image component
  */
-export function Image(props: ImageProps) {
-  return <NextImage {...props} />
-}
+export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
+  (props, ref) => {
+    return <NextImage ref={ref} {...props} />
+  },
+)
+
+Image.displayName = 'Image'

@@ -10,25 +10,30 @@ export type LinkProps = NextLinkProps & {
 /**
  * Link component
  */
-export function Link(props: LinkProps) {
-  const { isExternal, href, children, ...rest } = props
+export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => {
+    const { isExternal, href, children, ...rest } = props
 
-  if (isExternal) {
+    if (isExternal) {
+      return (
+        <a
+          ref={ref}
+          href={href.toString()}
+          target="_blank"
+          rel="noopener noreferrer"
+          {...rest}
+        >
+          {children}
+        </a>
+      )
+    }
+
     return (
-      <a
-        href={href.toString()}
-        target="_blank"
-        rel="noopener noreferrer"
-        {...rest}
-      >
+      <NextLink ref={ref} href={href} passHref {...rest}>
         {children}
-      </a>
+      </NextLink>
     )
-  }
+  },
+)
 
-  return (
-    <NextLink href={href} {...rest}>
-      {children}
-    </NextLink>
-  )
-}
+Link.displayName = 'Link'

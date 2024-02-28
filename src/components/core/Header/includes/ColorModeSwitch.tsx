@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import { Moon, Sun } from 'lucide-react'
 
 import { cx } from '@/utils'
 
@@ -23,7 +24,7 @@ export function ColorModeSwitch() {
 
   return (
     <button className={cx('', isDark ? '' : '')} onClick={handleClick}>
-      {isDark ? "it's dark" : "it's light"}
+      {isDark ? <Moon /> : <Sun />}
     </button>
   )
 }
