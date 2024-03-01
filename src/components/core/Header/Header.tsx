@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Button, Container, Flex, Link } from '@/components/ui'
+import { Button, Container, Flex, Link, FiatSelector } from '@/components/ui'
 import { cx } from '@/utils'
 
 import { ColorModeSwitch } from './includes'
@@ -35,7 +35,7 @@ export function Header() {
 
           {/* buttons */}
           <Flex className="items-center gap-6">
-            <Button>foo</Button>
+            <FiatSelector />
             <ColorModeSwitch />
           </Flex>
         </Flex>

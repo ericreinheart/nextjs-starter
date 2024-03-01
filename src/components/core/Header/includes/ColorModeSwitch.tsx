@@ -23,7 +23,10 @@ export function ColorModeSwitch() {
   }, [isDark])
 
   return (
-    <button className={cx('', isDark ? '' : '')} onClick={handleClick}>
+    <button
+      className={cx('hover:text-orange', isDark ? '' : '')}
+      onClick={handleClick}
+    >
       {isDark ? <Moon /> : <Sun />}
     </button>
   )
