@@ -19,9 +19,7 @@ export function Header() {
             href="/"
           >
             <Logo className={cx('h-10')} />
-            <p className="font-italic text-display-md font-bold">
-              Bitcoin Project
-            </p>
+            <p className="text-display-md font-bold">Bitcoin Project</p>
           </Link>
 
           {/* links */}
