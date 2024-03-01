@@ -7,25 +7,23 @@ import { cx } from '@/utils'
 export function Footer() {
   return (
     <footer>
-      <div>
-        {/* logo */}
-        <div>
-          <Link href="/">
-            <Logo className={cx('h-10')} />
-          </Link>
-        </div>
-
-        {/* links */}
-        <ul>
-          {/* {links.map(({ label, href }, index) => (
-            <Link key={index} href={href}>
-              {label}
-            </Link>
-          ))} */}
-        </ul>
+      <div
+        className={cx('my-5 flex flex-col items-center justify-center gap-y-5')}
+      >
+        <Link
+          href="/"
+          className={cx(
+            'flex h-10 w-auto flex-row items-center justify-start gap-x-4',
+          )}
+        >
+          <Logo className={cx('h-10')} />
+          <p className="font-italic text-display-md font-bold">
+            Bitcoin Project
+          </p>
+        </Link>
 
         <div>
-          <span>copyright text</span>
+          <span>© 2024 Bitcoin Project</span>
         </div>
       </div>
     </footer>

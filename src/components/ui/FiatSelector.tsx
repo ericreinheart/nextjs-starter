@@ -28,7 +28,7 @@ const FIAT_CURRENCIES = [
 
 export const FiatSelector = React.forwardRef<HTMLDivElement, FiatSelectorProps>(
   (props, ref) => {
-    const { className, ...rest } = props
+    const { className } = props
     const [selectedFiat, setSelectedFiat] = useState(FIAT_CURRENCIES[0])
 
     function onChangeHandler(currency: Currency) {
@@ -41,12 +41,18 @@ export const FiatSelector = React.forwardRef<HTMLDivElement, FiatSelectorProps>(
           <Listbox.Button
             className={cx(
               'flex flex-row items-center gap-x-2 hover:text-orange',
+              className,
             )}
           >
             {selectedFiat.name}
             <ChevronsUpDown />
           </Listbox.Button>
-          <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-black">
+          <Listbox.Options
+            className={cx(
+              'absolute z-10 mt-1 max-h-60 w-full overflow-auto bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-black',
+              className,
+            )}
+          >
             {FIAT_CURRENCIES.map((currency) => (
               <Listbox.Option
                 key={currency.id}

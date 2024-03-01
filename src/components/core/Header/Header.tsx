@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Button, Container, Flex, Link, FiatSelector } from '@/components/ui'
+import { Container, Flex, Link, FiatSelector } from '@/components/ui'
 import { cx } from '@/utils'
 
 import { ColorModeSwitch } from './includes'
