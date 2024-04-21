@@ -4,71 +4,69 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
+dependencies:
+  '@headlessui/react':
+    specifier: ^1.7.18
+    version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
+  clsx:
+    specifier: ^2.1.0
+    version: 2.1.0
+  dayjs:
+    specifier: ^1.11.7
+    version: 1.11.10
+  framer-motion:
+    specifier: ^11.0.8
+    version: 11.0.8(react-dom@18.2.0)(react@18.2.0)
+  next:
+    specifier: ^14.1.0
+    version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
+  react:
+    specifier: ^18.2.0
+    version: 18.2.0
+  react-dom:
+    specifier: ^18.2.0
+    version: 18.2.0(react@18.2.0)
+  slugify:
+    specifier: ^1.6.5
+    version: 1.6.6
 
-  .:
-    dependencies:
-      '@headlessui/react':
-        specifier: ^1.7.18
-        version: 1.7.18(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      clsx:
-        specifier: ^2.1.0
-        version: 2.1.0
-      dayjs:
-        specifier: ^1.11.7
-        version: 1.11.10
-      framer-motion:
-        specifier: ^11.0.8
-        version: 11.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      next:
-        specifier: ^14.1.0
-        version: 14.1.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      slugify:
-        specifier: ^1.6.5
-        version: 1.6.6
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.6
-        version: 20.12.6
-      '@types/react':
-        specifier: ^18.2.75
-        version: 18.2.75
-      '@types/react-dom':
-        specifier: ^18.2.19
-        version: 18.2.19
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^7.6.0
-        version: 7.6.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@4.9.5))(eslint@8.57.0)(typescript@4.9.5)
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.17(postcss@8.4.35)
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-config-next:
-        specifier: ^14.1.4
-        version: 14.1.4(eslint@8.57.0)(typescript@4.9.5)
-      postcss:
-        specifier: ^8.4.35
-        version: 8.4.35
-      prettier:
-        specifier: 3.2.5
-        version: 3.2.5
-      prettier-plugin-tailwindcss:
-        specifier: 0.5.11
-        version: 0.5.11(prettier@3.2.5)
-      tailwindcss:
-        specifier: ^3.4.3
-        version: 3.4.3
-      typescript:
-        specifier: ^4.9.4
-        version: 4.9.5
+devDependencies:
+  '@types/node':
+    specifier: ^20.12.7
+    version: 20.12.7
+  '@types/react':
+    specifier: ^18.2.75
+    version: 18.2.75
+  '@types/react-dom':
+    specifier: ^18.2.19
+    version: 18.2.19
+  '@typescript-eslint/eslint-plugin':
+    specifier: ^7.6.0
+    version: 7.6.0(@typescript-eslint/parser@7.6.0)(eslint@8.57.0)(typescript@4.9.5)
+  autoprefixer:
+    specifier: ^10.4.17
+    version: 10.4.17(postcss@8.4.35)
+  eslint:
+    specifier: ^8.57.0
+    version: 8.57.0
+  eslint-config-next:
+    specifier: ^14.1.4
+    version: 14.1.4(eslint@8.57.0)(typescript@4.9.5)
+  postcss:
+    specifier: ^8.4.35
+    version: 8.4.35
+  prettier:
+    specifier: 3.2.5
+    version: 3.2.5
+  prettier-plugin-tailwindcss:
+    specifier: 0.5.11
+    version: 0.5.11(prettier@3.2.5)
+  tailwindcss:
+    specifier: ^3.4.1
+    version: 3.4.1
+  typescript:
+    specifier: ^4.9.4
+    version: 4.9.5
 
 packages:
 
@@ -245,9 +243,12 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@20.12.6':
-    resolution: {integrity: sha512-3KurE8taB8GCvZBPngVbp0lk5CKi8M9f9k1rsADh0Evdz5SzJ+Q+Hx9uHoFGsLnLnd1xmkDQr2hVhlA0Mn0lKQ==}
-
+  /@types/node@20.12.7:
+    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+    
   '@types/prop-types@15.7.7':
     resolution: {integrity: sha512-FbtmBWCcSa2J4zL781Zf1p5YUBXQomPEcep9QZCfRfQgTxz3pJWiDFLebohZ9fFntX5ibzOkSsrJ0TEew8cAog==}
 
