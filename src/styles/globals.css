@@ -19,16 +19,37 @@ button {
   @apply relative focus:outline-none;
 }
 
-a:focus::before,
-button:focus::before {
+a:focus-visible::before,
+button:focus-visible::before {
   content: '';
   @apply absolute -inset-1 border-2 border-white;
 }
 
-a:focus::before {
+a:focus-visible::before {
   @apply rounded;
 }
 
-button:focus::before {
+button:focus-visible::before {
   @apply rounded-lg;
+}
+
+/* chrome autofill bg color override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* remove browser input default styles */
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

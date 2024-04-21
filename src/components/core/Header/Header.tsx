@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Button, Container, Flex, Link } from '@/components/ui'
+import { Button, Container, Link } from '@/components/ui'
 
 import { ColorModeSwitch } from './includes'
 
@@ -10,7 +10,7 @@ export function Header() {
   return (
     <header>
       <Container>
-        <Flex className="items-center justify-between">
+        <div className="flex items-center justify-between">
           <Link href="/">
             <Logo />
           </Link>
@@ -25,11 +25,11 @@ export function Header() {
           </nav>
 
           {/* buttons */}
-          <Flex className="items-center gap-6">
+          <div className="flex items-center gap-6">
             <Button>foo</Button>
             <ColorModeSwitch />
-          </Flex>
-        </Flex>
+          </div>
+        </div>
       </Container>
     </header>
   )

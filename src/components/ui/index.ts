@@ -1,7 +1,5 @@
 export * from './Button'
 export * from './Container'
-export * from './Flex'
-export * from './FlexCol'
 export * from './Grid'
 export * from './Image'
 export * from './Link'
