@@ -53,3 +53,16 @@ input {
   -moz-appearance: none;
   appearance: none;
 }
+
+/* summary override */
+summary {
+  @apply list-none;
+}
+
+summary::marker {
+  content: '';
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
