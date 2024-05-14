@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import { cx } from '@/utils'
 
+import { ChevronDownIcon } from '../icons'
+
 type AccordionProps = React.ComponentPropsWithoutRef<'details'>
 
 /**
@@ -58,35 +60,13 @@ export const AccordionTrigger = React.forwardRef<
       {children}
       {React.Children.count(children) > 1 ? (
         <div className={cx('flex grow justify-end')}>
-          <ChevronIcon />
+          <ChevronDownIcon />
         </div>
       ) : (
-        <ChevronIcon />
+        <ChevronDownIcon />
       )}
     </summary>
   )
 })
 
 AccordionTrigger.displayName = 'AccordionTrigger'
-
-/**
- * Chevron icon for accordion trigger to indicate if open or closed.
- */
-function ChevronIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={cx('transition-all')}
-    >
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  )
-}
