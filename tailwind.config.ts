@@ -6,10 +6,15 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
-    colors,
-    fontFamily,
-    fontSize,
-    extend: {},
+    extend: {
+      colors,
+      container: {
+        center: true,
+        padding: '1rem',
+      },
+      fontFamily,
+      fontSize,
+    },
   },
   plugins: [],
 }
