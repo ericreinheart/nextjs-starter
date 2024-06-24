@@ -19,14 +19,14 @@
     "dayjs": "^1.11.10",
     "framer-motion": "^11.2.11",
     "next": "^14.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "slugify": "^1.6.6"
   },
   "devDependencies": {
     "@types/node": "^20.14.8",
-    "@types/react": "^18.2.75",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.57.0",
