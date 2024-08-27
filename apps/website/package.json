@@ -1,0 +1,45 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Eric Reinheart",
+    "email": "eric@ericr.dev"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@headlessui/react": "^2.1.0",
+    "clsx": "^2.1.0",
+    "dayjs": "^1.11.10",
+    "framer-motion": "^11.2.11",
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^9.5.0",
+    "eslint-config-next": "^14.2.4",
+    "postcss": "^8.4.35",
+    "prettier": "3.3.2",
+    "prettier-plugin-tailwindcss": "0.6.5",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
+  },
+  "packageManager": "pnpm@9.4.0"
+}
