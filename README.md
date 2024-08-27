@@ -1,31 +1,15 @@
-# nextjs-starter
+# nextjs-starter-turborepo
 
-this is an opinionated next.js starter with typescript, eslint, prettier, tailwind.
+## What's inside?
 
-## getting started
+This Turborepo includes the following packages/apps:
 
-first, make sure you have node version `20.10.0` installed. or just use [node version manager](https://github.com/nvm-sh/nvm) and type:
+### Apps and Packages
 
-```bash
-nvm use
-```
+- `website`: nextjs website
+- `storyblok-website-intl`: nextjs website with [storyblok](https://www.storyblok.com/) integration
+- `ui`: react component lib with tailwind
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-to use pnpm run:
-
-```bash
-corepack enable
-```
-
-then install with:
-
-```bash
-pnpm install
-```
-
-for development, run:
-
-```bash
-pnpm dev
-```
-
-open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
