@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "@headlessui/react": "^2.1.0",
+    "@headlessui/react": "^2.1.5",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.13",
     "framer-motion": "^11.2.11",
