@@ -53,7 +53,7 @@ export async function generateMetadata(
     description: string
     ogTitle: string
     ogDescription: string
-    ogType: 'website' | 'article'
+    ogType: 'website' | 'article' | null
     ogUrl: string
     isNoIndex: boolean
   }
@@ -65,7 +65,7 @@ export async function generateMetadata(
     openGraph: {
       title: metaData.ogTitle,
       description: metaData.ogDescription,
-      type: metaData.ogType,
+      type: metaData.ogType || 'website',
       url: metaData.ogUrl,
     },
     robots: {
