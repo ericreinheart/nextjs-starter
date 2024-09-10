@@ -152,8 +152,8 @@ importers:
         specifier: ^9.5.0
         version: 9.9.1(jiti@1.21.0)
       eslint-config-next:
-        specifier: ^14.2.4
-        version: 14.2.6(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)
+        specifier: ^14.2.9
+        version: 14.2.9(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)
       postcss:
         specifier: ^8.4.44
         version: 8.4.44
@@ -174,7 +174,7 @@ importers:
     devDependencies:
       '@vercel/style-guide':
         specifier: ^5.2.0
-        version: 5.2.0(@next/eslint-plugin-next@14.2.6)(eslint@9.9.1(jiti@1.21.0))(prettier@3.3.3)(typescript@5.5.2)
+        version: 5.2.0(@next/eslint-plugin-next@14.2.9)(eslint@9.9.1(jiti@1.21.0))(prettier@3.3.3)(typescript@5.5.2)
       eslint-config-turbo:
         specifier: ^2.0.0
         version: 2.0.0(eslint@9.9.1(jiti@1.21.0))
@@ -467,8 +467,8 @@ packages:
   '@next/env@14.2.4':
     resolution: {integrity: sha512-3EtkY5VDkuV2+lNmKlbkibIJxcO4oIHEhBWne6PaAp+76J9KoSsGvNikp6ivzAT8dhhBMYrm6op2pS1ApG0Hzg==}
 
-  '@next/eslint-plugin-next@14.2.6':
-    resolution: {integrity: sha512-d3+p4AjIYmhqzYHhhmkRYYN6ZU35TwZAKX08xKRfnHkz72KhWL2kxMFsDptpZs5e8bBGdepn7vn1+9DaF8iX+A==}
+  '@next/eslint-plugin-next@14.2.9':
+    resolution: {integrity: sha512-tmLXuDNfPTqoFuSfsd9Q4R96SS/UCKTPtBnnR+cKDcbh8xZU+126vZnRWH1WEpOmS4Vl2Hy/X6SPmgOGZzn+hA==}
 
   '@next/swc-darwin-arm64@14.2.4':
     resolution: {integrity: sha512-AH3mO4JlFUqsYcwFUHb1wAKlebHU/Hv2u2kb1pAuRanDZ7pD/A/KPD98RHZmwsJpdHQwfEc/06mgpSzwrJYnNg==}
@@ -1190,8 +1190,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-next@14.2.6:
-    resolution: {integrity: sha512-z0URA5LO6y8lS/YLN0EDW/C4LEkDODjJzA37dvLVdzCPzuewjzTe1os5g3XclZAZrQ8X8hPaSMQ2JuVWwMmrTA==}
+  eslint-config-next@14.2.9:
+    resolution: {integrity: sha512-aNgGqWBp2KFcuEf9zNqmv+8dBkOrdyOlCIbdtyw7fiCQioLqXNcXmalAyeNtVyE95Kwgg11bgXvuVqdxpbR79g==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -3031,7 +3031,7 @@ snapshots:
 
   '@next/env@14.2.4': {}
 
-  '@next/eslint-plugin-next@14.2.6':
+  '@next/eslint-plugin-next@14.2.9':
     dependencies:
       glob: 10.3.10
 
@@ -3209,7 +3209,7 @@ snapshots:
 
   '@typescript-eslint/eslint-plugin@6.12.0(@typescript-eslint/parser@6.12.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2))(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)':
     dependencies:
-      '@eslint-community/regexpp': 4.10.0
+      '@eslint-community/regexpp': 4.11.0
       '@typescript-eslint/parser': 6.12.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)
       '@typescript-eslint/scope-manager': 6.12.0
       '@typescript-eslint/type-utils': 6.12.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)
@@ -3403,7 +3403,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/style-guide@5.2.0(@next/eslint-plugin-next@14.2.6)(eslint@9.9.1(jiti@1.21.0))(prettier@3.3.3)(typescript@5.5.2)':
+  '@vercel/style-guide@5.2.0(@next/eslint-plugin-next@14.2.9)(eslint@9.9.1(jiti@1.21.0))(prettier@3.3.3)(typescript@5.5.2)':
     dependencies:
       '@babel/core': 7.23.3
       '@babel/eslint-parser': 7.23.3(@babel/core@7.23.3)(eslint@9.9.1(jiti@1.21.0))
@@ -3425,7 +3425,7 @@ snapshots:
       eslint-plugin-unicorn: 48.0.1(eslint@9.9.1(jiti@1.21.0))
       prettier-plugin-packagejson: 2.4.6(prettier@3.3.3)
     optionalDependencies:
-      '@next/eslint-plugin-next': 14.2.6
+      '@next/eslint-plugin-next': 14.2.9
       eslint: 9.9.1(jiti@1.21.0)
       prettier: 3.3.3
       typescript: 5.5.2
@@ -3865,10 +3865,11 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-next@14.2.6(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2):
+  eslint-config-next@14.2.9(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2):
     dependencies:
-      '@next/eslint-plugin-next': 14.2.6
+      '@next/eslint-plugin-next': 14.2.9
       '@rushstack/eslint-patch': 1.6.0
+      '@typescript-eslint/eslint-plugin': 6.12.0(@typescript-eslint/parser@6.12.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2))(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)
       '@typescript-eslint/parser': 6.12.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.2)
       eslint: 9.9.1(jiti@1.21.0)
       eslint-import-resolver-node: 0.3.9
