@@ -18,7 +18,9 @@ export function PageError(props: PageErrorProps) {
 
   const handleClick = () => {
     if (errorCode === 404) {
-      return router.push('/')
+      router.push('/');
+
+ return;
     }
 
     router.refresh()

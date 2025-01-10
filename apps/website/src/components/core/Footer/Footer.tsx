@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 import { Link } from '@/components/ui'
-import { Logo } from '@/components/core'
+
+import { Logo } from '../Logo'
 
 export function Footer() {
   return (

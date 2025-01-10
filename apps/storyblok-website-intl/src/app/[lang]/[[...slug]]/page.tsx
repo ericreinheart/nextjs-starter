@@ -41,7 +41,7 @@ export async function generateMetadata(
   const { slug, lang } = params
 
   const res: ISbStory = await fetchData({
-    slug: slug || ['home'],
+    slug: slug ?? ['home'],
     sbParams: {
       version: isProduction ? 'published' : 'draft',
       language: lang,
@@ -65,7 +65,7 @@ export async function generateMetadata(
     openGraph: {
       title: metaData.ogTitle,
       description: metaData.ogDescription,
-      type: metaData.ogType || 'website',
+      type: metaData.ogType ?? 'website',
       url: metaData.ogUrl,
     },
     robots: {
@@ -83,7 +83,7 @@ export default async function StoryblokPage(props: PageProps) {
   }
 
   const res: ISbStory = await fetchData({
-    slug: slug || ['home'],
+    slug: slug ?? ['home'],
     sbParams: {
       ...sbParams,
     },

@@ -1,11 +1,11 @@
 import * as React from 'react'
+import { Button, Container } from '@repo/ui'
 
 import { Link } from '@/components/ui'
 
 import { ColorModeSwitch } from './includes'
 
 import { Logo } from '../Logo'
-import { Button, Container } from '@repo/ui'
 
 export function Header() {
   return (

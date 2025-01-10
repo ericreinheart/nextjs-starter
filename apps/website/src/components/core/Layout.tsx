@@ -1,6 +1,8 @@
 import * as React from 'react'
 
-import { Footer, Header, ThirdPartyScripts } from '@/components/core'
+import { Header } from './Header'
+import { Footer } from './Footer'
+import { ThirdPartyScripts } from './ThirdPartyScripts'
 
 type LayoutProps = {
   children: React.ReactNode

@@ -56,7 +56,7 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.redirect(
     new URL(
       `/${
-        isLocaleCookieValid ? localeCookie?.value : locale || i18n.defaultLocale
+        isLocaleCookieValid ? localeCookie?.value ?? i18n.defaultLocale : locale ?? i18n.defaultLocale
       }${pathname.startsWith('/') ? '' : '/'}${pathname}`,
       request.url,
     ),
@@ -64,7 +64,7 @@ export function middleware(request: NextRequest) {
 
   // Set the locale cookie
   if (!localeCookie || !isLocaleCookieValid) {
-    response.cookies.set('NEXT_LOCALE', locale || i18n.defaultLocale)
+    response.cookies.set('NEXT_LOCALE', locale ?? i18n.defaultLocale)
   }
 
   return response
