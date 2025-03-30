@@ -1,6 +1,4 @@
-import type { ThemeConfig } from 'tailwindcss/types/config'
-
-export const fontSize: ThemeConfig['fontSize'] = {
+export const fontSize = {
   h1: [
     '3.375rem', // 54px
     {
