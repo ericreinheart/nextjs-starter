@@ -13,7 +13,7 @@ import { getStoryblokApi, isProduction } from '@/lib'
 import type { Locale } from '@/i18n-config'
 
 type PageProps = {
-  params: { slug: string[] | undefined; lang: Locale }
+  params: Promise<{ slug: string[] | undefined; lang: Locale }>
 }
 
 async function fetchData(props: {
@@ -33,10 +33,8 @@ async function fetchData(props: {
   }
 }
 
-export async function generateMetadata(
-  { params }: PageProps,
-  // parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const params = await props.params;
   const { slug, lang } = params
 
   const res: ISbStory = await fetchData({
@@ -74,7 +72,7 @@ export async function generateMetadata(
 }
 
 export default async function StoryblokPage(props: PageProps) {
-  const { slug, lang } = props.params
+  const { slug, lang } = (await props.params)
 
   const sbParams: ISbStoriesParams = {
     version: isProduction ? 'published' : 'draft',
