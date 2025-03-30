@@ -3,11 +3,10 @@ import '../../styles/globals.css'
 
 import type { Metadata } from 'next'
 
-import { Layout } from '@/components/core'
+import { Layout, StoryblokProvider } from '@/components/core'
 import { cx } from '@/utils'
 import { i18n } from '@/i18n-config'
 import { isProduction } from '@/lib'
-import StoryblokProvider from '@/components/core/StoryblokProvider'
 
 export const metadata: Metadata = {
   title: 'NextJS Starter',
