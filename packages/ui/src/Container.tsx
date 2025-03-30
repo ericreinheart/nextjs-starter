@@ -14,7 +14,7 @@ export const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
     return (
       <div
         ref={ref}
-        className={cx(className, 'container max-w-screen-xl')}
+        className={cx(className, 'container max-w-(--breakpoint-xl)')}
         {...rest}
       />
     )

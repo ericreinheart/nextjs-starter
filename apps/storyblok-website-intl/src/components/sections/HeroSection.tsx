@@ -14,7 +14,7 @@ export function HeroSection(props: HeroSectionProps) {
 
   return (
     <div
-      className={cx('container mx-auto max-w-screen-2xl')}
+      className={cx('container mx-auto max-w-(--breakpoint-2xl)')}
       {...storyblokEditable(rest)}
     >
       <h1>{title}</h1>
