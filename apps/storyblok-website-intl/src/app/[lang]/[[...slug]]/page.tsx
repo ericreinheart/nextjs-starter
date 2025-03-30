@@ -1,8 +1,7 @@
 import {
-  getStoryblokApi,
-  StoryblokComponent,
   type ISbStory,
   type ISbStoriesParams,
+  StoryblokStory,
 } from '@storyblok/react/rsc'
 import { notFound } from 'next/navigation'
 import type {
@@ -10,7 +9,7 @@ import type {
   // ResolvingMetadata
 } from 'next'
 
-import { isProduction } from '@/lib'
+import { getStoryblokApi, isProduction } from '@/lib'
 import type { Locale } from '@/i18n-config'
 
 type PageProps = {
@@ -89,5 +88,12 @@ export default async function StoryblokPage(props: PageProps) {
     },
   })
 
-  return <StoryblokComponent blok={res.data.story.content} />
+  // const bridgeOptions = { resolveRelations: ['article.author'] }
+
+  return (
+    <StoryblokStory
+      // bridgeOptions={bridgeOptions}
+      story={res.data.story}
+    />
+  )
 }
