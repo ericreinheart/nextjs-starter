@@ -1,7 +1,7 @@
-import { type ISbStoriesParams, getStoryblokApi } from '@storyblok/react/rsc'
+import { type ISbStoriesParams } from '@storyblok/react/rsc'
 
 import { i18n } from '@/i18n-config'
-import { isProduction } from '@/lib'
+import { getStoryblokApi, isProduction } from '@/lib'
 
 async function fetchData(props: { sbParams: ISbStoriesParams }) {
   const { sbParams } = props
