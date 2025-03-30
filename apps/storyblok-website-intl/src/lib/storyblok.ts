@@ -1,6 +1,6 @@
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc'
 
-import { Page } from '@/components/core'
+import { Page } from '@/components/core/Page'
 import { HeroSection } from '@/components/sections'
 
 export const getStoryblokApi = storyblokInit({
