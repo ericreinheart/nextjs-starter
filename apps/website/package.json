@@ -17,7 +17,7 @@
     "@headlessui/react": "^2.1.5",
     "@repo/ui": "workspace:*",
     "clsx": "^2.1.0",
-    "dayjs": "^1.11.13",
+    "dayjs": "^1.11.18",
     "framer-motion": "^11.2.11",
     "next": "15.2.4",
     "react": "19.1.0",
