@@ -14,7 +14,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.4",
+    "@formatjs/intl-localematcher": "^0.6.2",
     "@headlessui/react": "^2.1.5",
     "@repo/ui": "workspace:*",
     "@storyblok/react": "^4.5.2",
