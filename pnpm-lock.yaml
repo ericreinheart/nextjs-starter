@@ -25,13 +25,13 @@ importers:
         version: 0.8.0
       '@headlessui/react':
         specifier: ^2.1.5
-        version: 2.1.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 2.1.5(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@storyblok/react':
         specifier: ^4.5.2
-        version: 4.7.0(next@15.4.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 4.7.0(next@15.4.10(react-dom@19.1.0(react@19.2.3))(react@19.2.3))(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -40,19 +40,19 @@ importers:
         version: 1.11.13
       framer-motion:
         specifier: ^11.2.11
-        version: 11.2.12(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 11.2.12(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       negotiator:
         specifier: ^1.0.0
         version: 1.0.0
       next:
         specifier: 15.4.10
-        version: 15.4.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 15.4.10(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       react:
-        specifier: 19.1.0
-        version: 19.1.0
+        specifier: 19.2.3
+        version: 19.2.3
       react-dom:
         specifier: 19.1.0
-        version: 19.1.0(react@19.1.0)
+        version: 19.1.0(react@19.2.3)
       slugify:
         specifier: ^1.6.6
         version: 1.6.6
@@ -76,11 +76,11 @@ importers:
         specifier: ^22.10.2
         version: 22.10.2
       '@types/react':
-        specifier: 19.0.12
-        version: 19.0.12
+        specifier: 19.2.9
+        version: 19.2.9
       '@types/react-dom':
         specifier: 19.0.4
-        version: 19.0.4(@types/react@19.0.12)
+        version: 19.0.4(@types/react@19.2.9)
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.44)
@@ -101,7 +101,7 @@ importers:
     dependencies:
       '@headlessui/react':
         specifier: ^2.1.5
-        version: 2.1.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 2.1.5(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -113,16 +113,16 @@ importers:
         version: 1.11.13
       framer-motion:
         specifier: ^11.2.11
-        version: 11.2.12(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 11.2.12(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       next:
         specifier: 15.4.10
-        version: 15.4.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 15.4.10(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       react:
-        specifier: 19.1.0
-        version: 19.1.0
+        specifier: 19.2.3
+        version: 19.2.3
       react-dom:
         specifier: 19.1.0
-        version: 19.1.0(react@19.1.0)
+        version: 19.1.0(react@19.2.3)
       slugify:
         specifier: ^1.6.6
         version: 1.6.6
@@ -143,11 +143,11 @@ importers:
         specifier: ^22.10.2
         version: 22.10.2
       '@types/react':
-        specifier: 19.0.12
-        version: 19.0.12
+        specifier: 19.2.9
+        version: 19.2.9
       '@types/react-dom':
         specifier: 19.0.4
-        version: 19.0.4(@types/react@19.0.12)
+        version: 19.0.4(@types/react@19.2.9)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.13.1
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.9.3))(eslint@8.57.0)(typescript@5.9.3)
@@ -225,8 +225,8 @@ importers:
         specifier: ^4.0.17
         version: 4.1.18
       '@types/react':
-        specifier: ^19.0.12
-        version: 19.0.12
+        specifier: ^19.2.9
+        version: 19.2.9
       autoprefixer:
         specifier: ^10.4.18
         version: 10.4.18(postcss@8.4.44)
@@ -234,8 +234,8 @@ importers:
         specifier: ^8.4.44
         version: 8.4.44
       react:
-        specifier: ^19.1.0
-        version: 19.1.0
+        specifier: ^19.2.3
+        version: 19.2.3
       tailwindcss:
         specifier: ^4.0.17
         version: 4.1.18
@@ -942,8 +942,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.0.0
 
-  '@types/react@19.0.12':
-    resolution: {integrity: sha512-V6Ar115dBDrjbtXSrS+/Oruobc+qVbbUxDFC1RSbRqLt5SYvxxyIDrSC85RWml54g+jfNeEMZhEj7wW07ONQhA==}
+  '@types/react@19.2.9':
+    resolution: {integrity: sha512-Lpo8kgb/igvMIPeNV2rsYKTgaORYdO1XGVZ4Qz3akwOj0ySGYMPlQWa8BaLn0G63D1aSaAQ5ldR06wCpChQCjA==}
 
   '@types/semver@7.5.6':
     resolution: {integrity: sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==}
@@ -1293,8 +1293,8 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  csstype@3.1.2:
-    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+  csstype@3.2.3:
+    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -2760,8 +2760,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react@19.1.0:
-    resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
+  react@19.2.3:
+    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
     engines: {node: '>=0.10.0'}
 
   read-pkg-up@7.0.1:
@@ -3465,18 +3465,18 @@ snapshots:
       '@floating-ui/core': 1.6.3
       '@floating-ui/utils': 0.2.3
 
-  '@floating-ui/react-dom@2.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@floating-ui/react-dom@2.1.1(react-dom@19.1.0(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@floating-ui/dom': 1.6.6
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
 
-  '@floating-ui/react@0.26.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@floating-ui/react@0.26.18(react-dom@19.1.0(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@floating-ui/react-dom': 2.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@floating-ui/react-dom': 2.1.1(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       '@floating-ui/utils': 0.2.3
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
       tabbable: 6.2.0
 
   '@floating-ui/utils@0.2.3': {}
@@ -3490,14 +3490,14 @@ snapshots:
       '@formatjs/fast-memoize': 3.1.0
       tslib: 2.8.1
 
-  '@headlessui/react@2.1.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@headlessui/react@2.1.5(react-dom@19.1.0(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@floating-ui/react': 0.26.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@react-aria/focus': 3.17.1(react@19.1.0)
-      '@react-aria/interactions': 3.21.3(react@19.1.0)
-      '@tanstack/react-virtual': 3.10.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      '@floating-ui/react': 0.26.18(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
+      '@react-aria/focus': 3.17.1(react@19.2.3)
+      '@react-aria/interactions': 3.21.3(react@19.2.3)
+      '@tanstack/react-virtual': 3.10.7(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -3769,45 +3769,45 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@react-aria/focus@3.17.1(react@19.1.0)':
+  '@react-aria/focus@3.17.1(react@19.2.3)':
     dependencies:
-      '@react-aria/interactions': 3.21.3(react@19.1.0)
-      '@react-aria/utils': 3.24.1(react@19.1.0)
-      '@react-types/shared': 3.23.1(react@19.1.0)
+      '@react-aria/interactions': 3.21.3(react@19.2.3)
+      '@react-aria/utils': 3.24.1(react@19.2.3)
+      '@react-types/shared': 3.23.1(react@19.2.3)
       '@swc/helpers': 0.5.18
       clsx: 2.1.1
-      react: 19.1.0
+      react: 19.2.3
 
-  '@react-aria/interactions@3.21.3(react@19.1.0)':
+  '@react-aria/interactions@3.21.3(react@19.2.3)':
     dependencies:
-      '@react-aria/ssr': 3.9.4(react@19.1.0)
-      '@react-aria/utils': 3.24.1(react@19.1.0)
-      '@react-types/shared': 3.23.1(react@19.1.0)
+      '@react-aria/ssr': 3.9.4(react@19.2.3)
+      '@react-aria/utils': 3.24.1(react@19.2.3)
+      '@react-types/shared': 3.23.1(react@19.2.3)
       '@swc/helpers': 0.5.18
-      react: 19.1.0
+      react: 19.2.3
 
-  '@react-aria/ssr@3.9.4(react@19.1.0)':
+  '@react-aria/ssr@3.9.4(react@19.2.3)':
     dependencies:
       '@swc/helpers': 0.5.18
-      react: 19.1.0
+      react: 19.2.3
 
-  '@react-aria/utils@3.24.1(react@19.1.0)':
+  '@react-aria/utils@3.24.1(react@19.2.3)':
     dependencies:
-      '@react-aria/ssr': 3.9.4(react@19.1.0)
-      '@react-stately/utils': 3.10.1(react@19.1.0)
-      '@react-types/shared': 3.23.1(react@19.1.0)
+      '@react-aria/ssr': 3.9.4(react@19.2.3)
+      '@react-stately/utils': 3.10.1(react@19.2.3)
+      '@react-types/shared': 3.23.1(react@19.2.3)
       '@swc/helpers': 0.5.18
       clsx: 2.1.1
-      react: 19.1.0
+      react: 19.2.3
 
-  '@react-stately/utils@3.10.1(react@19.1.0)':
+  '@react-stately/utils@3.10.1(react@19.2.3)':
     dependencies:
       '@swc/helpers': 0.5.18
-      react: 19.1.0
+      react: 19.2.3
 
-  '@react-types/shared@3.23.1(react@19.1.0)':
+  '@react-types/shared@3.23.1(react@19.2.3)':
     dependencies:
-      react: 19.1.0
+      react: 19.2.3
 
   '@rtsao/scc@1.1.0': {}
 
@@ -3818,12 +3818,12 @@ snapshots:
       '@storyblok/richtext': 3.2.0
       storyblok-js-client: 6.10.12
 
-  '@storyblok/react@4.7.0(next@15.4.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@storyblok/react@4.7.0(next@15.4.10(react-dom@19.1.0(react@19.2.3))(react@19.2.3))(react-dom@19.1.0(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@storyblok/js': 3.4.1
-      next: 15.4.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      next: 15.4.10(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
 
   '@storyblok/richtext@3.2.0': {}
 
@@ -3914,11 +3914,11 @@ snapshots:
       postcss: 8.4.44
       tailwindcss: 4.1.18
 
-  '@tanstack/react-virtual@3.10.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@tanstack/react-virtual@3.10.7(react-dom@19.1.0(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@tanstack/virtual-core': 3.10.7
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
 
   '@tanstack/virtual-core@3.10.7': {}
 
@@ -3938,13 +3938,13 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
-  '@types/react-dom@19.0.4(@types/react@19.0.12)':
+  '@types/react-dom@19.0.4(@types/react@19.2.9)':
     dependencies:
-      '@types/react': 19.0.12
+      '@types/react': 19.2.9
 
-  '@types/react@19.0.12':
+  '@types/react@19.2.9':
     dependencies:
-      csstype: 3.1.2
+      csstype: 3.2.3
 
   '@types/semver@7.5.6': {}
 
@@ -4445,7 +4445,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  csstype@3.1.2: {}
+  csstype@3.2.3: {}
 
   damerau-levenshtein@1.0.8: {}
 
@@ -5285,12 +5285,12 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.2.12(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  framer-motion@11.2.12(react-dom@19.1.0(react@19.2.3))(react@19.2.3):
     dependencies:
       tslib: 2.6.3
     optionalDependencies:
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
 
   fs.realpath@1.0.0: {}
 
@@ -5880,15 +5880,15 @@ snapshots:
 
   negotiator@1.0.0: {}
 
-  next@15.4.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  next@15.4.10(react-dom@19.1.0(react@19.2.3))(react@19.2.3):
     dependencies:
       '@next/env': 15.4.10
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001764
       postcss: 8.4.31
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-      styled-jsx: 5.1.6(react@19.1.0)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
+      styled-jsx: 5.1.6(react@19.2.3)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.4.8
       '@next/swc-darwin-x64': 15.4.8
@@ -6105,14 +6105,14 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-dom@19.1.0(react@19.1.0):
+  react-dom@19.1.0(react@19.2.3):
     dependencies:
-      react: 19.1.0
+      react: 19.2.3
       scheduler: 0.26.0
 
   react-is@16.13.1: {}
 
-  react@19.1.0: {}
+  react@19.2.3: {}
 
   read-pkg-up@7.0.1:
     dependencies:
@@ -6483,10 +6483,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.6(react@19.1.0):
+  styled-jsx@5.1.6(react@19.2.3):
     dependencies:
       client-only: 0.0.1
-      react: 19.1.0
+      react: 19.2.3
 
   supports-color@7.2.0:
     dependencies:
