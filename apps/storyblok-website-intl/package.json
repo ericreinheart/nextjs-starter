@@ -22,7 +22,7 @@
     "dayjs": "^1.11.13",
     "framer-motion": "^11.2.11",
     "negotiator": "^1.0.0",
-    "next": "15.4.10",
+    "next": "16.1.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "slugify": "^1.6.6"
