@@ -19,7 +19,7 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@types/node": "^20.14.8",
+    "@types/node": "^22.10.2",
     "react": "^19.2.3"
   },
   "devDependencies": {
