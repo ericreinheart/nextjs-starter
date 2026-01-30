@@ -15,7 +15,7 @@
   },
   "packageManager": "pnpm@9.4.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "name": "nextjs-starter-turbo"
 }
