@@ -18,7 +18,7 @@ export function generateStaticParams() {
     return []
   }
 
-  return i18n.locales.map((locale) => ({ locale }))
+  return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
 export default function RootLayout({

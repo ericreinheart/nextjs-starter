@@ -1,4 +1,4 @@
-import { type SbBlokData, storyblokEditable } from '@storyblok/react/rsc'
+import { type SbBlokData, storyblokEditable } from '@repo/storyblok'
 
 import { cx } from '@/utils'
 

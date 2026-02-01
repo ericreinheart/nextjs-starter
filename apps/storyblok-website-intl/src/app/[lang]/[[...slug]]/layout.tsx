@@ -1,36 +1,24 @@
-import { type ISbStoriesParams } from '@storyblok/react/rsc'
-
 import { i18n } from '@/i18n-config'
-import { getStoryblokApi, isProduction } from '@/lib'
-
-async function fetchData(props: { sbParams: ISbStoriesParams }) {
-  const { sbParams } = props
-
-  const storyblokApi = getStoryblokApi()
-
-  return storyblokApi.get(`cdn/stories`, sbParams)
-}
+import { fetchStories, isProduction } from '@/lib'
 
 export async function generateStaticParams() {
   if (!isProduction) {
     return []
   }
 
-  const res: { data: { stories: { slug: string }[] } } = await fetchData({
+  const stories = await fetchStories({
     sbParams: {
       version: 'published',
     },
   })
 
-  const { data } = res
+  if (!stories) return []
 
-  const paths = i18n.locales.flatMap((locale) =>
-    data.stories.map(({ slug }) => {
-      return {
-        slug: slug === 'home' ? undefined : [slug],
-        locale,
-      }
-    }),
+  const paths = i18n.locales.flatMap((lang) =>
+    stories.map(({ slug }: { slug: string }) => ({
+      lang,
+      slug: slug === 'home' ? undefined : [slug],
+    })),
   )
 
   return paths

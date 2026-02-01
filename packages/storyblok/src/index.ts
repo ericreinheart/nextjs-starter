@@ -5,7 +5,12 @@ export {
   StoryblokStory,
 } from '@storyblok/react/rsc'
 
-export type { ISbStoryData, ISbStories, ISbStory } from '@storyblok/react'
+export type {
+  ISbStoryData,
+  ISbStories,
+  ISbStory,
+  ISbStoriesParams,
+} from '@storyblok/react'
 
 export { createStoryblok } from './create-storyblok'
 export { StoryblokProvider } from './storyblok-provider'

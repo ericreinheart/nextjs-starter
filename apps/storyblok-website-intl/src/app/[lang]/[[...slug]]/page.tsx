@@ -1,51 +1,29 @@
-import {
-  type ISbStory,
-  type ISbStoriesParams,
-  StoryblokStory,
-} from '@storyblok/react/rsc'
+import { type ISbStoriesParams, StoryblokStory } from '@repo/storyblok'
 import { notFound } from 'next/navigation'
-import type {
-  Metadata,
-  // ResolvingMetadata
-} from 'next'
+import type { Metadata } from 'next'
 
-import { getStoryblokApi, isProduction } from '@/lib'
+import { fetchStory, isProduction } from '@/lib'
 import type { Locale } from '@/i18n-config'
+import { type PageStoryblok } from '@/lib/storyblok.types'
 
 type PageProps = {
   params: Promise<{ slug: string[] | undefined; lang: Locale }>
 }
 
-async function fetchData(props: {
-  slug: string[]
-  sbParams: ISbStoriesParams
-}) {
-  const { slug, sbParams } = props
-
-  const storyblokApi = getStoryblokApi()
-
-  try {
-    const res = await storyblokApi.get(`cdn/stories/${slug[0]}`, sbParams)
-
-    return res
-  } catch (e) {
-    return notFound()
-  }
-}
-
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const params = await props.params;
+  const params = await props.params
   const { slug, lang } = params
 
-  const res: ISbStory = await fetchData({
+  const story = await fetchStory({
     slug: slug ?? ['home'],
     sbParams: {
-      version: isProduction ? 'published' : 'draft',
       language: lang,
     },
   })
 
-  const metaData = res.data.story.content as {
+  if (!story) return {}
+
+  const metaData = story.content as {
     title: string
     description: string
     ogTitle: string
@@ -72,26 +50,19 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 }
 
 export default async function StoryblokPage(props: PageProps) {
-  const { slug, lang } = (await props.params)
+  const { slug, lang } = await props.params
 
   const sbParams: ISbStoriesParams = {
     version: isProduction ? 'published' : 'draft',
     language: lang,
   }
 
-  const res: ISbStory = await fetchData({
+  const story = await fetchStory<PageStoryblok>({
     slug: slug ?? ['home'],
-    sbParams: {
-      ...sbParams,
-    },
+    sbParams,
   })
 
-  // const bridgeOptions = { resolveRelations: ['article.author'] }
+  if (!story) notFound()
 
-  return (
-    <StoryblokStory
-      // bridgeOptions={bridgeOptions}
-      story={res.data.story}
-    />
-  )
+  return <StoryblokStory story={story} />
 }
