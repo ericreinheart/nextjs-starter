@@ -2,7 +2,7 @@ import {
   storyblokEditable,
   StoryblokServerComponent,
   type SbBlokData,
-} from '@storyblok/react/rsc'
+} from '@repo/storyblok'
 
 export function Page({ blok }: { blok: SbBlokData & { body: SbBlokData[] } }) {
   return (

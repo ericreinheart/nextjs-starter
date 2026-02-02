@@ -1,13 +1,16 @@
-import { apiPlugin, storyblokInit } from '@storyblok/react/rsc'
+import { createStoryblok } from '@repo/storyblok'
 
 import { Page } from '@/components/core/Page'
 import { HeroSection } from '@/components/sections'
 
-export const getStoryblokApi = storyblokInit({
+const storyblok = createStoryblok({
   accessToken: process.env.STORYBLOK_API_TOKEN,
-  use: [apiPlugin],
   components: {
     page: Page,
     HeroSection,
   },
 })
+
+export const getStoryblokApi = storyblok.getStoryblokApi
+export const fetchStory = storyblok.fetchStory
+export const fetchStories = storyblok.fetchStories

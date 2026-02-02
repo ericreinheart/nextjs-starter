@@ -8,16 +8,20 @@
   },
   "license": "MIT",
   "scripts": {
+    "predev": "pnpm storyblok:generate:types",
     "dev": "next dev --turbopack",
+    "prebuild": "pnpm storyblok:generate:types",
     "build": "next build",
     "start": "next start",
+    "storyblok:generate:types": "pnpm storyblok:login && npx storyblok@3.36.1 pull-components --space 294149 --resolve-datasources && npx storyblok@3.36.1 generate-typescript-typedefs --sourceFilePaths ./components.294149.json --destinationFilePath ./src/lib/storyblok.types.ts --JSONSchemaToTSOptionsPath ./node_modules/@repo/storyblok/config/JSONSchemaToTSOptions.json",
+    "storyblok:login": "storyblok-login",
     "lint": "next lint"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.0",
     "@headlessui/react": "^2.1.5",
+    "@repo/storyblok": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@storyblok/react": "^4.5.2",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "framer-motion": "^11.2.11",
@@ -25,7 +29,8 @@
     "next": "16.1.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "slugify": "^1.6.6"
+    "slugify": "^1.6.6",
+    "storyblok": "3.36.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

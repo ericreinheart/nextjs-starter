@@ -6,7 +6,7 @@
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "env": ["STORYBLOK_API_TOKEN"]
+      "env": ["STORYBLOK_API_TOKEN", "STORYBLOK_AUTH_TOKEN"]
     },
     "lint": {},
     "type-check": {},
