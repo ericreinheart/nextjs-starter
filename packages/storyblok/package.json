@@ -23,6 +23,6 @@
   "dependencies": {
     "@storyblok/react": "^4.5.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.4"
   }
 }
