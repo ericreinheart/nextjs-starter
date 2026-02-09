@@ -24,7 +24,7 @@
     "@repo/ui": "workspace:*",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.19",
-    "framer-motion": "^11.2.11",
+    "framer-motion": "^12.34.0",
     "negotiator": "^1.0.0",
     "next": "16.1.5",
     "react": "19.2.4",

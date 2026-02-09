@@ -39,8 +39,8 @@ importers:
         specifier: ^1.11.19
         version: 1.11.19
       framer-motion:
-        specifier: ^11.2.11
-        version: 11.2.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: ^12.34.0
+        version: 12.34.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       negotiator:
         specifier: ^1.0.0
         version: 1.0.0
@@ -115,8 +115,8 @@ importers:
         specifier: ^1.11.19
         version: 1.11.19
       framer-motion:
-        specifier: ^11.2.11
-        version: 11.2.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: ^12.34.0
+        version: 12.34.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next:
         specifier: 16.1.5
         version: 16.1.5(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -2401,12 +2401,12 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@11.2.12:
-    resolution: {integrity: sha512-lCjkV4nA9rWOy2bhR4RZzkp2xpB++kFmUZ6D44V9VQaxk+JDmbDd5lq+u58DjJIIllE8AZEXp9OG/TyDN4FB/w==}
+  framer-motion@12.34.0:
+    resolution: {integrity: sha512-+/H49owhzkzQyxtn7nZeF4kdH++I2FWrESQ184Zbcw5cEqNHYkE5yxWxcTLSj5lNx3NWdbIRy5FHqUvetD8FWg==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
-      react: ^18.0.0
-      react-dom: ^18.0.0
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
       '@emotion/is-prop-valid':
         optional: true
@@ -3214,6 +3214,12 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
+
+  motion-dom@12.34.0:
+    resolution: {integrity: sha512-Lql3NuEcScRDxTAO6GgUsRHBZOWI/3fnMlkMcH5NftzcN37zJta+bpbMAV9px4Nj057TuvRooMK7QrzMCgtz6Q==}
+
+  motion-utils@12.29.2:
+    resolution: {integrity: sha512-G3kc34H2cX2gI63RqU+cZq+zWRRPSsNIOjpdl9TN4AQwC4sgwYPl/Q/Obf/d53nOm569T0fYK+tcoSV50BWx8A==}
 
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -4048,9 +4054,6 @@ packages:
 
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-
-  tslib@2.6.3:
-    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
@@ -6952,9 +6955,11 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.2.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  framer-motion@12.34.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
-      tslib: 2.6.3
+      motion-dom: 12.34.0
+      motion-utils: 12.29.2
+      tslib: 2.8.1
     optionalDependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -7754,6 +7759,12 @@ snapshots:
     optional: true
 
   mkdirp@1.0.4: {}
+
+  motion-dom@12.34.0:
+    dependencies:
+      motion-utils: 12.29.2
+
+  motion-utils@12.29.2: {}
 
   mri@1.2.0: {}
 
@@ -8567,8 +8578,6 @@ snapshots:
       strip-bom: 3.0.0
 
   tslib@1.14.1: {}
-
-  tslib@2.6.3: {}
 
   tslib@2.8.1: {}
 
