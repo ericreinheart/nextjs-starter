@@ -76,8 +76,8 @@ importers:
         specifier: ^0.6.4
         version: 0.6.4
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^25.2.2
+        version: 25.2.2
       '@types/react':
         specifier: 19.2.9
         version: 19.2.9
@@ -143,8 +143,8 @@ importers:
         specifier: ^4.0.17
         version: 4.1.18
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^25.2.2
+        version: 25.2.2
       '@types/react':
         specifier: 19.2.9
         version: 19.2.9
@@ -225,8 +225,8 @@ importers:
         specifier: workspace:*
         version: link:../config-typescript
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^25.2.2
+        version: 25.2.2
       '@types/react':
         specifier: 19.2.9
         version: 19.2.9
@@ -1139,6 +1139,9 @@ packages:
 
   '@types/node@22.10.2':
     resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+
+  '@types/node@25.2.2':
+    resolution: {integrity: sha512-BkmoP5/FhRYek5izySdkOneRyXYN35I860MFAGupTdebyE66uZaR+bXLHq8k4DirE5DwQi3NuhvRU1jqTVwUrQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -4181,6 +4184,9 @@ packages:
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+
   unique-string@2.0.0:
     resolution: {integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==}
     engines: {node: '>=8'}
@@ -5154,7 +5160,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 22.10.2
+      '@types/node': 25.2.2
 
   '@types/json-schema@7.0.15': {}
 
@@ -5162,7 +5168,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.2.2
 
   '@types/lodash@4.17.23': {}
 
@@ -5178,6 +5184,10 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
+  '@types/node@25.2.2':
+    dependencies:
+      undici-types: 7.16.0
+
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/prettier@2.7.3': {}
@@ -5192,7 +5202,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.2.2
 
   '@types/semver@7.5.6': {}
 
@@ -8716,6 +8726,8 @@ snapshots:
       which-boxed-primitive: 1.1.1
 
   undici-types@6.20.0: {}
+
+  undici-types@7.16.0: {}
 
   unique-string@2.0.0:
     dependencies:

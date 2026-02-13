@@ -29,7 +29,7 @@
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.0.17",
-    "@types/node": "^22.10.2",
+    "@types/node": "^25.2.2",
     "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
