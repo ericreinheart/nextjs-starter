@@ -14,7 +14,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^2.1.5",
+    "@ariakit/react": "^0.4.15",
     "@repo/ui": "workspace:*",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.19",

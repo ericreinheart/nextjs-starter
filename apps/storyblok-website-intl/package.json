@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.1",
-    "@headlessui/react": "^2.1.5",
+    "@ariakit/react": "^0.4.15",
     "@repo/storyblok": "workspace:*",
     "@repo/ui": "workspace:*",
     "clsx": "^2.1.1",

@@ -35,6 +35,8 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.0.17"
+    "@ariakit/react": "^0.4.15",
+    "@tailwindcss/postcss": "^4.0.17",
+    "class-variance-authority": "^0.7.1"
   }
 }

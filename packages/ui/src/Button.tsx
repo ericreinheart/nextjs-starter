@@ -1,56 +1,50 @@
 import * as React from 'react'
+import { Button as AriakitButton } from '@ariakit/react'
+import { cva, type VariantProps } from 'class-variance-authority'
 
 import { cx } from './cx'
 
-const FILLED_BUTTON_CLASSES = cx('')
-const OUTLINE_BUTTON_CLASSES = cx('')
-const DISABLED_BUTTON_CLASSES = cx('')
-
-const BUTTON_CLASSES = {
-  default: cx(''),
-  filled: FILLED_BUTTON_CLASSES,
-  outline: OUTLINE_BUTTON_CLASSES,
-  disabled: DISABLED_BUTTON_CLASSES, // use `disabled:` prefix
-  loading: DISABLED_BUTTON_CLASSES,
-}
+const buttonVariants = cva('', {
+  variants: {
+    variant: {
+      filled: '',
+      outline: '',
+    },
+  },
+  defaultVariants: {
+    variant: 'filled',
+  },
+})
 
 export type ButtonProps = Omit<
-  React.ComponentPropsWithoutRef<'button'>,
+  React.ComponentPropsWithoutRef<typeof AriakitButton>,
   'disabled'
-> & {
-  isDisabled?: boolean
-  isLoading?: boolean
-  variant?: 'filled' | 'outline'
-}
+> &
+  VariantProps<typeof buttonVariants> & {
+    isDisabled?: boolean
+    isLoading?: boolean
+  }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
     const {
       isDisabled = false,
       isLoading = false,
-      variant = 'filled',
+      variant,
       className,
       children,
       ...rest
     } = props
 
-    const classes = cx(
-      className,
-      BUTTON_CLASSES.default,
-      BUTTON_CLASSES[variant],
-      BUTTON_CLASSES.disabled,
-    )
-
     return (
-      <button
+      <AriakitButton
         ref={ref}
-        className={classes}
+        className={cx(buttonVariants({ variant }), className)}
         disabled={isDisabled || isLoading}
-        type="button"
         {...rest}
       >
         {children}
-      </button>
+      </AriakitButton>
     )
   },
 )
