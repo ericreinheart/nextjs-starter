@@ -2,14 +2,12 @@ import { PageError } from '@/components/sections'
 
 function Custom404Page() {
   return (
-    <>
-      <PageError
-        errorCode={404}
-        errorTitle="Looks like you're lost!"
-        errorText="Well, this is awkward. We couldn't find the page, sorry!"
+    <PageError
         buttonLabel="Back Home"
+        errorCode={404}
+        errorText="Well, this is awkward. We couldn't find the page, sorry!"
+        errorTitle="Looks like you're lost!"
       />
-    </>
   )
 }
 

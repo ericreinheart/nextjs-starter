@@ -11,13 +11,16 @@ function stripLocalePrefix(pathname: string): string {
     if (loc === i18n.defaultLocale) {
       continue
     }
+
     if (pathname.startsWith(`/${loc}/`)) {
       return pathname.slice(`/${loc}`.length)
     }
+
     if (pathname === `/${loc}`) {
       return '/'
     }
   }
+
   return pathname
 }
 
@@ -26,10 +29,12 @@ function getCurrentLocale(pathname: string): string {
     if (loc === i18n.defaultLocale) {
       continue
     }
+
     if (pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`) {
       return loc
     }
   }
+
   return i18n.defaultLocale
 }
 

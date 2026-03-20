@@ -39,6 +39,7 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.redirect(new URL(pathWithoutLocale, request.url))
 
     response.cookies.set('NEXT_LOCALE', i18n.defaultLocale)
+
     return response
   }
 
@@ -48,6 +49,7 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.next()
 
     response.cookies.set('NEXT_LOCALE', pathnameLocale)
+
     return response
   }
 
@@ -57,7 +59,7 @@ export function middleware(request: NextRequest) {
     (loc) => loc === localeCookie?.value,
   )
   const preferredLocale = isLocaleCookieValid
-    ? localeCookie!.value
+    ? (localeCookie?.value ?? i18n.defaultLocale)
     : getLocale(request)
 
   // If preferred locale is not the default, redirect to prefixed path
@@ -68,6 +70,7 @@ export function middleware(request: NextRequest) {
     )
 
     response.cookies.set('NEXT_LOCALE', preferredLocale)
+
     return response
   }
 
@@ -77,6 +80,7 @@ export function middleware(request: NextRequest) {
   )
 
   response.cookies.set('NEXT_LOCALE', i18n.defaultLocale)
+
   return response
 }
 

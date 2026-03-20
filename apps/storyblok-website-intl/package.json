@@ -15,7 +15,7 @@
     "start": "next start",
     "storyblok:generate:types": "pnpm storyblok:login && npx storyblok@3.36.1 pull-components --space 294149 --resolve-datasources && npx storyblok@3.36.1 generate-typescript-typedefs --sourceFilePaths ./components.294149.json --destinationFilePath ./src/lib/storyblok.types.ts --JSONSchemaToTSOptionsPath ./node_modules/@repo/storyblok/config/JSONSchemaToTSOptions.json",
     "storyblok:login": "storyblok-login",
-    "lint": "next lint"
+    "lint": "eslint src/"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.1",

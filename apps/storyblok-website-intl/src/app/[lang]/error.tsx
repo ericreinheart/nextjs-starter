@@ -13,14 +13,12 @@ function Custom500Page(
   // const { error, reset } = props
 
   return (
-    <>
-      <PageError
-        errorCode={500}
-        errorTitle="Oops, looks like something went wrong!"
-        errorText="Well, this is awkward. Please try again later."
+    <PageError
         buttonLabel="Try again"
+        errorCode={500}
+        errorText="Well, this is awkward. Please try again later."
+        errorTitle="Oops, looks like something went wrong!"
       />
-    </>
   )
 }
 
