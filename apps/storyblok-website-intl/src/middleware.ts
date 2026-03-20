@@ -5,7 +5,7 @@ import Negotiator from 'negotiator'
 
 import { i18n } from './i18n-config'
 
-function getLocale(request: NextRequest): string | undefined {
+function getLocale(request: NextRequest): string {
   // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {}
 
@@ -19,54 +19,64 @@ function getLocale(request: NextRequest): string | undefined {
     locales,
   )
 
-  const locale = matchLocale(languages, locales, i18n.defaultLocale)
+  return matchLocale(languages, locales, i18n.defaultLocale)
+}
 
-  return locale
+function getPathnameLocale(pathname: string): string | undefined {
+  return i18n.locales.find(
+    (loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`,
+  )
 }
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  const pathnameLocale = getPathnameLocale(pathname)
 
-  const locale = getLocale(request)
+  // If pathname has the default locale prefix, redirect to remove it
+  // e.g. /de/products → /products
+  if (pathnameLocale === i18n.defaultLocale) {
+    const pathWithoutLocale = pathname.slice(`/${i18n.defaultLocale}`.length) || '/'
+    const response = NextResponse.redirect(new URL(pathWithoutLocale, request.url))
 
-  // check for existing locale cookie
-  const cookies = request.cookies
-  const localeCookie = cookies.get('NEXT_LOCALE')
-  const isLocaleCookieValid = i18n.locales.some(
-    (loc) => loc === localeCookie?.value,
-  )
-
-  // Check if there is any supported locale in the pathname
-  const isPathnameMissingLocale = i18n.locales.every(
-    (loc) => !pathname.startsWith(`/${loc}/`) && pathname !== `/${loc}`,
-  )
-
-  if (!isPathnameMissingLocale) {
-    const response = NextResponse.next()
-
-    // Set the locale cookie
-    response.cookies.set('NEXT_LOCALE', pathname.split('/')[1])
-
+    response.cookies.set('NEXT_LOCALE', i18n.defaultLocale)
     return response
   }
 
-  // Redirect if there is no locale in the pathname
-  // e.g. incoming request is /products
-  // The new URL is now /en-us/products
-  const response = NextResponse.redirect(
-    new URL(
-      `/${
-        isLocaleCookieValid ? localeCookie?.value ?? i18n.defaultLocale : locale ?? i18n.defaultLocale
-      }${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-      request.url,
-    ),
-  )
+  // If pathname has a non-default locale prefix, let it through
+  // e.g. /en/products → serves [lang]/[[...slug]] with lang=en
+  if (pathnameLocale) {
+    const response = NextResponse.next()
 
-  // Set the locale cookie
-  if (!localeCookie || !isLocaleCookieValid) {
-    response.cookies.set('NEXT_LOCALE', locale ?? i18n.defaultLocale)
+    response.cookies.set('NEXT_LOCALE', pathnameLocale)
+    return response
   }
 
+  // No locale in pathname — determine which locale to use
+  const localeCookie = request.cookies.get('NEXT_LOCALE')
+  const isLocaleCookieValid = i18n.locales.some(
+    (loc) => loc === localeCookie?.value,
+  )
+  const preferredLocale = isLocaleCookieValid
+    ? localeCookie!.value
+    : getLocale(request)
+
+  // If preferred locale is not the default, redirect to prefixed path
+  // e.g. /products → /en/products
+  if (preferredLocale !== i18n.defaultLocale) {
+    const response = NextResponse.redirect(
+      new URL(`/${preferredLocale}${pathname}`, request.url),
+    )
+
+    response.cookies.set('NEXT_LOCALE', preferredLocale)
+    return response
+  }
+
+  // Default locale: rewrite to /de/... internally (no visible URL change)
+  const response = NextResponse.rewrite(
+    new URL(`/${i18n.defaultLocale}${pathname}`, request.url),
+  )
+
+  response.cookies.set('NEXT_LOCALE', i18n.defaultLocale)
   return response
 }
 
